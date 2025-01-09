@@ -1,6 +1,4 @@
-Here is the updated and more interactive version of the markdown with your name, GitHub, and LinkedIn links:
 
-```markdown
 # AskHerOut.js 🌹
 
 ## 📖 Description
