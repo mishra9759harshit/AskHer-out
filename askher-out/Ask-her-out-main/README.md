@@ -41,7 +41,7 @@ Feel free to customize **AskHerOut.js** to make it even more special:
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/mishra9759harshit/AskHer-out/blob/main/LICENSE)) file for more details.
 
 ---
 
