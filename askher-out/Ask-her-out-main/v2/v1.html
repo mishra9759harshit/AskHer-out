@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Coding Journey</title>
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #4a4a4a;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ff6f91;
+      animation: popIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #4a4a4a;
+    }
+
+    button {
+      background-color: #ff6f91;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ff506e;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      background-color: #d43f56;
+      transform: scale(0.95);
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ff9a9e;
+      border-radius: 6px;
+      width: 80%;
+      margin: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #ff6f91;
+      box-shadow: 0 0 6px rgba(255, 111, 145, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="app"></div>
+
+  <script>
+    function startInvitation() {
+      document.getElementById("app").innerHTML = `
+        <h1>Hey, beautiful!</h1>
+        <p>
+          Life is like code—sometimes it gets complicated, but together, we can debug it all. 💻❤️ 
+          Ready to find out if we’re the perfect pair?
+        </p>
+        <button onclick="question1()">Let’s Begin!</button>
+      `;
+    }
+
+    function question1() {
+      document.getElementById("app").innerHTML = `
+        <h1>Question 1</h1>
+        <p>In the coding world of love, do you prefer elegant tabs or the precise alignment of spaces?</p>
+        <button onclick="question2('tabs')">Tabs - smooth and structured</button>
+        <button onclick="question2('spaces')">Spaces - detailed and deliberate</button>
+      `;
+    }
+
+    function question2(indentationStyle) {
+      document.getElementById("app").innerHTML = `
+        <h1>Question 2</h1>
+        <p>If our love story were a programming language, which one would it be?</p>
+        <input type="text" id="programmingLanguage" placeholder="e.g., Python, JavaScript, Ruby">
+        <button onclick="question3('${indentationStyle}')">Next</button>
+      `;
+    }
+
+    function question3(indentationStyle) {
+      const programmingLanguage = document.getElementById('programmingLanguage').value.trim();
+      if (!programmingLanguage) {
+        alert("Please enter a programming language!");
+        return;
+      }
+      document.getElementById("app").innerHTML = `
+        <h1>Question 3</h1>
+        <p>Picture this: a starry night, us coding together in the world of <strong>${programmingLanguage}</strong>, using ${indentationStyle}. How does that sound?</p>
+        <button onclick="showResult(true)">A dream come true! 🌟</button>
+        <button onclick="showResult(false)">Maybe just friends? 🤔</button>
+      `;
+    }
+
+    function showResult(isMatch) {
+      if (isMatch) {
+        document.getElementById("app").innerHTML = `
+          <h1>It’s a Match!</h1>
+          <p>
+            Our code has no bugs—it’s perfectly compiled! Let’s write our love story, one chapter (or commit) at a time. 💞
+          </p>
+          <button onclick="window.location.href='https://github.com/mishra9759harshit'">I’m in! Let’s start! 💻❤️</button>
+
+        `;
+      } else {
+        document.getElementById("app").innerHTML = `
+          <h1>No Worries!</h1>
+          <p>
+            Sometimes, even the best algorithms can’t predict love. Let’s keep debugging life as friends. 😊
+          </p>
+          <button onclick="window.location.href='https://github.com/mishra9759harshit'">Let’s be coding buddies! 🤝</button>
+
+        `;
+      }
+    }
+
+    startInvitation();
+  </script>
+</body>
+</html>

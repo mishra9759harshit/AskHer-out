@@ -1,0 +1,141 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #4a4a4a;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff6f91;
+  animation: popIn 1s ease-in-out;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: scale(0.95);
+}
+
+.no {
+  background-color: #ff4f4f;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.no:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}
+
+.no:active {
+  background-color: #d32f2f;
+  transform: scale(0.95);
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6f91;
+}
+
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+footer {
+  margin-top: 200px;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
