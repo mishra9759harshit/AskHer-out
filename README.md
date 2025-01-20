@@ -8,7 +8,7 @@
 
 ## 💡 How It Works
 
-The app uses a simple JavaScript function to ask a question using the `prompt` function. Based on the answer provided, it displays a corresponding message using `console.log`. The messages can be customized to suit your style and personality.
+- The app uses a simple JavaScript function to ask a question using the `prompt` function. Based on the answer provided, it displays a corresponding message using `console.log`. The messages can be customized to suit your style and personality.
 
 ## 🎈 Customization
 
