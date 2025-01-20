@@ -1,5 +1,3 @@
-Here’s an updated version of the **AskHerOut.js** readme with an additional section on how to fork and push changes in a simple way:
-
 ---
 
 # AskHerOut.js 🌹
